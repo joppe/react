@@ -8,10 +8,25 @@
     <script type="text/javascript" src="vendor/systemjs/dist/system.js"></script>
     <script type="text/javascript" src="js/system.conf.js"></script>
     <script type="text/javascript">
-        System.import('js/main');
+        System.import('main');
     </script>
-</head>
-<body>
+    <style>
+        body.t-console {
+            background-color: black;
+            color: #00cc00;
+            font-family: monospace;
+        }
 
+        .t-console .clock {
+            border: 2px solid #00cc00;
+            padding: 30px;
+        }
+
+        .t-console .clock__digit {
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body class="t-console">
 </body>
 </html>

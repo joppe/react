@@ -6,14 +6,14 @@ System.config({
     transpiler: 'babel',
 
     paths: {
-        "*": "*.js"
+        "*": "js/*.js"
     },
 
     map: {
-        jquery: 'vendor/jquery/dist/jquery',
-        underscore: 'vendor/underscore/underscore',
-        backbone: 'vendor/backbone/backbone',
-        react: 'vendor/react/react'
+        jquery: '/vendor/jquery/dist/jquery.js',
+        underscore: '/vendor/underscore/underscore.js',
+        backbone: '/vendor/backbone/backbone.js',
+        react: '/vendor/react/react.js'
     },
 
     meta: {
