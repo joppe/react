@@ -1,7 +1,7 @@
 import React from 'react';
-import _ from 'underscore';
+import {ValueComponent} from './value-component.js';
 
-class Hand extends React.Component {
+class Hand extends ValueComponent {
     componentDidMount() {
         this.listenTo(
             this.props.clock,
@@ -40,8 +40,6 @@ class Hand extends React.Component {
         };
     }
 }
-
-_.extend(Hand.prototype, Backbone.Events);
 
 export class Clock extends React.Component {
     render() {

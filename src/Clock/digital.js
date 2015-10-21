@@ -1,21 +1,7 @@
 import React from 'react';
-import _ from 'underscore';
+import {ValueComponent} from './value-component.js';
 
-
-
-class Digit extends React.Component {
-    componentDidMount() {
-        this.listenTo(
-            this.props.clock,
-            'change:' + this.props.prop,
-            (m) => this.setState({value: m.get(this.props.prop)})
-        );
-    }
-
-    componentWillUnmount() {
-        this.stopListening();
-    }
-
+class Digit extends ValueComponent {
     render() {
         if (!this.state) {
             return <span />;
@@ -37,5 +23,3 @@ export class Clock extends React.Component {
         );
     }
 }
-
-_.extend(Digit.prototype, Backbone.Events);
