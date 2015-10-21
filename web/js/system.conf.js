@@ -5,6 +5,10 @@ System.config({
 
     transpiler: 'babel',
 
+    paths: {
+        "*": "*.js"
+    },
+
     map: {
         jquery: 'vendor/jquery/dist/jquery',
         underscore: 'vendor/underscore/underscore',
