@@ -1,7 +1,8 @@
 import React from 'react';
 
 import {Clock as ClockModel} from 'Clock/model'
-import {Clock as ClockView} from 'Clock/view';
+import {Clock as DigitalClock} from 'Clock/digital';
+import {Clock as AnalogClock} from 'Clock/analog';
 
 let c = new ClockModel();
 
@@ -10,7 +11,8 @@ React.render(
         <input type="button" onClick={() => c.run()} value="start" />
         <input type="button" onClick={() => c.stop()} value="stop" />
 
-        <ClockView clock={c} />
+        <DigitalClock clock={c} />
+        <AnalogClock r={100} clock={c} />
     </div>,
     document.body
 );
