@@ -20,4 +20,6 @@ babel-watch:
 
 setup: npm bower symlinks babel
 
-
+clean:
+	rm -rf node_modules
+	find web -type l -delete
